@@ -1,0 +1,12 @@
+landmark coordinates:
+(column, row, slice_num)
+
+(x,y,z)
+x = 0 on left side of image, increases from left to right
+y = 0 at top of image, increases from top to bottom
+z = 0 at lowest (axial) slice, increases in upward direction
+
+Each row in landmarks file corresponds to a specific landmark.
+Train the model on the desired landmark by indexing the corresponding row
+in sample_circular() in dataReader.py. (e.g. landmark = all_landmarks[14] is for
+the pc landmark) 
