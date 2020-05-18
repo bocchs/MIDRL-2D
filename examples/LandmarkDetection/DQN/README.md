@@ -5,7 +5,7 @@ A DQN is trained for locating landmarks in 2D slices of different modalities and
 
 ---
 ## Results
-Examples of the single 2D agent locating different landmarks in 2D slices.
+Examples of the single 2D agent locating different landmarks in 2D slices. Red is the target bounding box, yellow is the agent bounding box.
 
 * Nipple
 <p align="center">
