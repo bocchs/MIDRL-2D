@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 # File: DQN.py
 # Author: Amir Alansary <amiralansary@gmail.com>
+# Modified: Alex Bocchieri <abocchi2@jhu.edu>
 
 # for importing from tensorpack_medical
 import sys

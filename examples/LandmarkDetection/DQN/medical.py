@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 # File: medical.py
 # Author: Amir Alansary <amiralansary@gmail.com>
+# Modified: Alex Bocchieri <abocchi2@jhu.edu>
 
 import csv
 import itertools
@@ -685,7 +686,7 @@ class MedicalPlayer(gym.Env):
         self.viewer.render()
         # time.sleep(self.viz)
         # save gif
-        if self.saveGif and self.terminal:
+        if self.saveGif:
             image_data = pyglet.image.get_buffer_manager().get_color_buffer().get_image_data()
             data = image_data.get_data('RGB', image_data.width * 3)
             arr = np.array(bytearray(data)).astype('uint8')
@@ -704,6 +705,9 @@ class MedicalPlayer(gym.Env):
                 pngname = self.filename.split('.')[0] + '_terminal_combined.png'
                 self.terminal_img.append(im)
                 im.save(pngname)
+
+                self.viewer.saveGif(self.filename.split('.')[0] + ".gif", arr=self.gif_buffer, duration=self.viz)
+
 
                 # save target
                 #self.viewer.close()

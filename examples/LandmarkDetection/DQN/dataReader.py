@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 # File: dataReader.py
 # Author: Amir Alansary <amiralansary@gmail.com>
+# Modified: Alex Bocchieri <abocchi2@jhu.edu>
 
 import warnings
 warnings.simplefilter("ignore", category=ResourceWarning)

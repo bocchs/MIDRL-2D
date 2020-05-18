@@ -2,6 +2,45 @@
 
 A DQN is trained for locating landmarks in 2D slices of different modalities and imaging parameters.
 
+
+---
+## Results
+Examples of the single 2D agent locating different landmarks in 2D slices.
+
+* Nipple
+<p align="center">
+<img src="./images/ald_tp1_Pre.gif" width="400">
+</p>
+
+* Prostate
+<p align="center">
+<img src="./images/ADC_Resliced_0019.gif" width="400">
+</p>
+
+* Heart
+<p align="center">
+<img src="./images/normal6_W_159.gif" width="400">
+</p>
+
+* Kidney
+<p align="center">
+<img src="./images/normal6_W_141.gif" width="400">
+</p>
+
+* Trochanter
+<p align="center">
+<img src="./images/normal6_W_97.gif" width="400">
+</p>
+
+* Knee
+<p align="center">
+<img src="./images/normal6_W_27.gif" width="400">
+</p>
+
+
+---
+
+
 ## 
 ```
 usage: DQN.py [-h] [--gpu GPU] [--load LOAD] [--task {play,eval,train}]

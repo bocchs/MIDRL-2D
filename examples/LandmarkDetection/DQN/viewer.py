@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 # File: viewer.py
 # Author: Amir Alansary <amiralansary@gmail.com>
+# Modified: Alex Bocchieri <abocchi2@jhu.edu>
 
 import os
 import math
