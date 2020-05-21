@@ -1,0 +1,7 @@
+tensorflow-gpu==1.14.0
+tensorpack
+opencv-python
+pillow
+gym
+SimpleITK
+pydicom

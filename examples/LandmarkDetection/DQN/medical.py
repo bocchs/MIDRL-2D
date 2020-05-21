@@ -43,7 +43,7 @@ except ImportError as e:
 from tensorpack.utils.utils import get_rng
 from tensorpack.utils.stats import StatCounter
 
-from IPython.core.debugger import set_trace
+#from IPython.core.debugger import set_trace
 from dataReader import *
 
 _ALE_LOCK = threading.Lock()
