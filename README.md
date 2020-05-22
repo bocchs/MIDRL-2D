@@ -1,63 +1,84 @@
-# RL-Medical
+## Multitask radiological modality invariant landmark localization using deep reinforcement learning
 
-Deep Reinforcement Learning (DRL) agents applied to medical images
+This work presents multitask modality invariant deep reinforcement learning framework (MIDRL) for landmark localization across multiple different orgrans and modalities using a single reinforcement learning agent. 
 
-## Landmark Localization
-
-- [Landmark detection using different DQN variants](examples/LandmarkDetection/DQN)
+---
+## Results
+Examples of the single 2D agent locating different landmarks in 2D slices. Red is the target bounding box, yellow is the agent bounding box.
+<p>
+<img src="./images/ald_tp1_Pre.gif" width="250" height="250">
+<img src="./images/ADC_Resliced_0019.gif" width="250" height="250">
+<img src="./images/normal6_W_159.gif" width="250" height="250">
+<img src="./images/normal6_W_141.gif" width="250" height="250">
+<img src="./images/normal6_W_97.gif" width="250" height="250">
+<img src="./images/normal6_W_27.gif" width="250" height="250">
+</p>
 
 
 ## Installation
+Make a virtualenv and set it up by [following the link](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
 
-### Dependencies
-
-tensorpack-medical requires:
-
-+ Python=3.6
-+ [tensorflow-gpu=1.14.0](https://pypi.org/project/tensorflow-gpu/)
-+ [tensorpack=0.9.5](https://github.com/tensorpack/tensorpack)
-+ [opencv-python](https://pypi.org/project/opencv-python/)
-+ [pillow](https://pypi.org/project/Pillow/)
-+ [gym](https://pypi.org/project/gym/)
-+ [SimpleITK](https://pypi.org/project/SimpleITK/)
-
-### User installation
+After setting up a virtual envt, install the dependencies using: 
+```bash
+pip install -r requirements.txt
 ```
-pip install -U git+https://github.com/amiralansary/rl-medical.git
-```
-
-## Development
-
-New contributors of any experience level are very welcomed
 
 ### Source code
 You can clone the latest version of the source code with the command::
 ```
-https://github.com/amiralansary/rl-medical.git
+https://github.com/bocchs/MIDRL-2D.git
 ```
+
+## 
+```
+usage: DQN.py [-h] [--gpu GPU] [--load LOAD] [--task {play,eval,train}]
+              [--algo {DQN,Double,Dueling,DuelingDouble}]
+              [--files FILES [FILES ...]] [--saveGif] [--saveVideo]
+              [--logDir LOGDIR] [--name NAME]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --gpu GPU             comma separated list of GPU(s) to use.
+  --load LOAD           load model
+  --task {play,eval,train}
+                        task to perform. Must load a pretrained model if task
+                        is "play" or "eval"
+  --algo {DQN,Double,Dueling,DuelingDouble}
+                        algorithm
+  --files FILES [FILES ...]
+                        Filepath to the text file that comtains list of
+                        images. Each line of this file is a full path to an
+                        image scan. For (task == train or eval) there should
+                        be two input files ['images', 'landmarks']
+  --saveGif             save gif image of the game
+  --saveVideo           save video of the game
+  --logDir LOGDIR       store logs in this directory during training
+  --name NAME           name of current experiment for logs
+
+```
+
+### Train
+```
+ python DQN.py --task train --algo DQN --gpu 0 --files './data/filenames/image_files.txt' './data/filenames/landmark_files.txt'
+```
+
+### Evaluate
+```
+python DQN.py --task eval --algo DQN --gpu 0 --load data/models/DQN_multiscale_brain_mri_point_pc_ROI_45_45_45/model-600000 --files './data/filenames/image_files.txt' './data/filenames/landmark_files.txt'
+```
+
+### Test
+```
+python DQN.py --task play --algo DQN --gpu 0 --load data/models/DQN_multiscale_brain_mri_point_pc_ROI_45_45_45/model-600000 --files './data/filenames/image_files.txt'
+```
+
 
 ## Citation
 
-If you use this code in your research, please cite these paper:
+If you use this code in your research, please cite this paper:
 
-```
-@article{alansary2019evaluating,
-  title={{Evaluating Reinforcement Learning Agents for Anatomical Landmark Detection}},
-  author={Alansary, Amir and Oktay, Ozan and Li, Yuanwei and Le Folgoc, Loic and 
-          Hou, Benjamin and Vaillant, Ghislain and Kamnitsas, Konstantinos and 
-          Vlontzos, Athanasios and Glocker, Ben and Kainz, Bernhard and Rueckert, Daniel},
-  journal={Medical Image Analysis},
-  year={2019},
-  publisher={Elsevier}
-}
 
-@inproceedings{alansary2018automatic,
-  title={Automatic view planning with multi-scale deep reinforcement learning agents},
-  author={Alansary, Amir and Le Folgoc, Loic and Vaillant, Ghislain and Oktay, Ozan and Li, Yuanwei and 
-  Bai, Wenjia and Passerat-Palmbach, Jonathan and Guerrero, Ricardo and Kamnitsas, Konstantinos and Hou, Benjamin and others},
-  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
-  pages={277--285},
-  year={2018},
-  organization={Springer}
-}
-```
+## References
+
+[1] Amir Alansary, Ozan Oktay, Yuanwei Li, Loic Le Folgoc, Benjamin Hou, Ghislain Vaillant, Konstantinos Kamnitsas, Athanasios Vlontzos,  Ben Glocker, Bernhard Kainz, and Daniel Rueckert. Evaluating Reinforcement Learning Agents for Anatomical Landmark Detection. Medical Image Analysis, 2019.
+[2] Amir  Alansary,  Loic  Le  Folgoc,  Ghislain  Vaillant,  Ozan  Oktay,  Yuanwei  Li,  Wenjia  Bai,Jonathan  Passerat-Palmbach,  Ricardo  Guerrero,  Konstantinos  Kamnitsas,  BenjaminHou, et al. Automatic view planning with multi-scale deep reinforcement learning agents.InInternational Conference on Medical Image Computing and Computer-Assisted Inter-vention, pages 277–285. Springer, 2018
