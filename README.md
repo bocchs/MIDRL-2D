@@ -6,12 +6,12 @@ This work presents multitask modality invariant deep reinforcement learning fram
 ## Results
 Examples of the single 2D agent locating different landmarks in 2D slices. Red is the target bounding box, yellow is the agent bounding box.
 <p>
-<img src="./images/ald_tp1_Pre.gif" width="250" height="250">
-<img src="./images/ADC_Resliced_0019.gif" width="250" height="250">
-<img src="./images/normal6_W_159.gif" width="250" height="250">
-<img src="./images/normal6_W_141.gif" width="250" height="250">
-<img src="./images/normal6_W_97.gif" width="250" height="250">
-<img src="./images/normal6_W_27.gif" width="250" height="250">
+<img src="DQN/images/ald_tp1_Pre.gif" width="250" height="250">
+<img src="DQN/images/ADC_Resliced_0019.gif" width="250" height="250">
+<img src="DQN/images/normal6_W_159.gif" width="250" height="250">
+<img src="DQN/images/normal6_W_141.gif" width="250" height="250">
+<img src="DQN/images/normal6_W_97.gif" width="250" height="250">
+<img src="DQN/images/normal6_W_27.gif" width="250" height="250">
 </p>
 
 
@@ -81,4 +81,4 @@ If you use this code in your research, please cite this paper:
 ## References
 
 [1] Amir Alansary, Ozan Oktay, Yuanwei Li, Loic Le Folgoc, Benjamin Hou, Ghislain Vaillant, Konstantinos Kamnitsas, Athanasios Vlontzos,  Ben Glocker, Bernhard Kainz, and Daniel Rueckert. Evaluating Reinforcement Learning Agents for Anatomical Landmark Detection. Medical Image Analysis, 2019.
-[2] Amir  Alansary,  Loic  Le  Folgoc,  Ghislain  Vaillant,  Ozan  Oktay,  Yuanwei  Li,  Wenjia  Bai,Jonathan  Passerat-Palmbach,  Ricardo  Guerrero,  Konstantinos  Kamnitsas,  BenjaminHou, et al. Automatic view planning with multi-scale deep reinforcement learning agents.InInternational Conference on Medical Image Computing and Computer-Assisted Inter-vention, pages 277–285. Springer, 2018
+[2] Amir  Alansary,  Loic  Le  Folgoc,  Ghislain  Vaillant,  Ozan  Oktay,  Yuanwei  Li,  Wenjia  Bai,Jonathan  Passerat-Palmbach,  Ricardo  Guerrero,  Konstantinos  Kamnitsas,  BenjaminHou, et al. Automatic view planning with multi-scale deep reinforcement learning agents.InInternational Conference on Medical Image Computing and Computer-Assisted Inter-vention, pages 277â€“285. Springer, 2018
