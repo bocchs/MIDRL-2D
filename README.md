@@ -29,7 +29,7 @@ You can clone the latest version of the source code with the command::
 https://github.com/bocchs/MIDRL-2D.git
 ```
 
-## 
+##  Usage
 ```
 usage: DQN.py [-h] [--gpu GPU] [--load LOAD] [--task {play,eval,train}]
               [--algo {DQN,Double,Dueling,DuelingDouble}]
