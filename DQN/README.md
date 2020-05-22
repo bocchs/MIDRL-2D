@@ -6,12 +6,12 @@ This work presents multitask modality invariant deep reinforcement learning fram
 ## Results
 Examples of the single 2D agent locating different landmarks in 2D slices. Red is the target bounding box, yellow is the agent bounding box.
 <p>
-<img src="./images/ald_tp1_Pre.gif" width="300" height="300">
-<img src="./images/ADC_Resliced_0019.gif" width="300" height="300">
-<img src="./images/normal6_W_159.gif" width="300" height="300">
-<img src="./images/normal6_W_141.gif" width="300" height="300">
-<img src="./images/normal6_W_97.gif" width="300" height="300">
-<img src="./images/normal6_W_27.gif" width="300" height="300">
+<img src="./images/ald_tp1_Pre.gif" width="250" height="250">
+<img src="./images/ADC_Resliced_0019.gif" width="300" height="250">
+<img src="./images/normal6_W_159.gif" width="250" height="250">
+<img src="./images/normal6_W_141.gif" width="250" height="250">
+<img src="./images/normal6_W_97.gif" width="250" height="250">
+<img src="./images/normal6_W_27.gif" width="250" height="250">
 </p>
 ---
 
