@@ -7,37 +7,16 @@ A DQN is trained for locating landmarks in 2D slices of different modalities and
 ## Results
 Examples of the single 2D agent locating different landmarks in 2D slices. Red is the target bounding box, yellow is the agent bounding box.
 
-* Nipple
-<p align="center">
+<p>
 <img src="./images/ald_tp1_Pre.gif" width="400">
-</p>
-
-* Prostate
-<p align="center">
 <img src="./images/ADC_Resliced_0019.gif" width="400">
-</p>
-
-* Heart
-<p align="center">
 <img src="./images/normal6_W_159.gif" width="400">
-</p>
-
-* Kidney
-<p align="center">
 <img src="./images/normal6_W_141.gif" width="400">
-</p>
-
-* Trochanter
-<p align="center">
 <img src="./images/normal6_W_97.gif" width="400">
-</p>
-
-* Knee
-<p align="center">
 <img src="./images/normal6_W_27.gif" width="400">
+
+
 </p>
-
-
 ---
 
 
@@ -86,7 +65,9 @@ python DQN.py --task play --algo DQN --gpu 0 --load data/models/DQN_multiscale_b
 
 ## Citation
 
-If you use this code in your research, please cite this paper:
+
+## References
+
 
 ```
 @article{alansary2019evaluating,
