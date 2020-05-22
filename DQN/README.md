@@ -1,21 +1,17 @@
-# Anatomical Landmark Detection
+## Multitask radiological modality invariant landmark localization using deep reinforcement learning
 
-A DQN is trained for locating landmarks in 2D slices of different modalities and imaging parameters.
-
+This work presents multitask modality invariant deep reinforcement learning framework (MIDRL) for landmark localization across multiple different orgrans and modalities using a single reinforcement learning agent. 
 
 ---
 ## Results
 Examples of the single 2D agent locating different landmarks in 2D slices. Red is the target bounding box, yellow is the agent bounding box.
-
 <p>
-<img src="./images/ald_tp1_Pre.gif" width="400">
-<img src="./images/ADC_Resliced_0019.gif" width="400">
-<img src="./images/normal6_W_159.gif" width="400">
-<img src="./images/normal6_W_141.gif" width="400">
-<img src="./images/normal6_W_97.gif" width="400">
-<img src="./images/normal6_W_27.gif" width="400">
-
-
+<img src="./images/ald_tp1_Pre.gif" width="300" height="300">
+<img src="./images/ADC_Resliced_0019.gif" width="300" height="300">
+<img src="./images/normal6_W_159.gif" width="300" height="300">
+<img src="./images/normal6_W_141.gif" width="300" height="300">
+<img src="./images/normal6_W_97.gif" width="300" height="300">
+<img src="./images/normal6_W_27.gif" width="300" height="300">
 </p>
 ---
 
@@ -68,15 +64,6 @@ python DQN.py --task play --algo DQN --gpu 0 --load data/models/DQN_multiscale_b
 
 ## References
 
+[1] Amir Alansary, Ozan Oktay, Yuanwei Li, Loic Le Folgoc, Benjamin Hou, Ghislain Vaillant, Konstantinos Kamnitsas, Athanasios Vlontzos,  Ben Glocker, Bernhard Kainz, and Daniel Rueckert. Evaluating Reinforcement Learning Agents for Anatomical Landmark
+Detection. Medical Image Analysis, 2019.
 
-```
-@article{alansary2019evaluating,
-  title={{Evaluating Reinforcement Learning Agents for Anatomical Landmark Detection}},
-  author={Alansary, Amir and Oktay, Ozan and Li, Yuanwei and Le Folgoc, Loic and 
-          Hou, Benjamin and Vaillant, Ghislain and Kamnitsas, Konstantinos and 
-          Vlontzos, Athanasios and Glocker, Ben and Kainz, Bernhard and Rueckert, Daniel},
-  journal={Medical Image Analysis},
-  year={2019},
-  publisher={Elsevier}
-}
-```
