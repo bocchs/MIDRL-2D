@@ -76,7 +76,7 @@ python DQN.py --task play --algo DQN --gpu 0 --load data/models/DQN_multiscale_b
 ## Citation
 
 If you use this code in your research, please cite this paper:
-
+Parekh VS, E. BA, Braverman V, Jacobs MA: Multitask radiological modality invariant landmark localization using deep reinforcement learning. In: Proceedings of the Third Conference on Medical Imaging with Deep Learning. vol. 121. Proceedings of Machine Learning Research: PMLR; 2020: 588--600.
 
 ## References
 
